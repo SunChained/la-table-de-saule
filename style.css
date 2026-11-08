@@ -4,6 +4,8 @@
   --texte-secondaire: #6b6157;
   --accent: #4f5d43;
   --trait: #d8cdb9;
+  --nuit: #10130d;
+  --lueur: #fbf6ec;
 }
 
 body {
@@ -11,10 +13,10 @@ body {
   color: var(--texte);
   font-family: "Lato", sans-serif;
   margin: 0;
-  padding: 0 20px;
 }
 
 .logo,
+.hero-titre,
 h2,
 h3,
 .plat-nom {
@@ -65,7 +67,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--accent);
+  color: var(--lueur);
   text-decoration: none;
   font-size: 15px;
 }
@@ -73,7 +75,7 @@ nav a {
 .logo {
   font-size: 28px;
   text-align: center;
-  color: var(--accent);
+  color: var(--lueur);
 }
 
 h2 {
@@ -120,11 +122,64 @@ main a {
 
 footer {
   margin-top: 48px;
-  padding: 24px 0;
+  padding: 24px 20px;
   border-top: 1px solid var(--trait);
   text-align: center;
   font-size: 14px;
   color: var(--texte-secondaire);
+}
+
+header {
+  min-height: 100vh;
+  background-color: var(--nuit);
+  color: var(--lueur);
+  padding: 24px 20px;
+  background-image:
+    linear-gradient(
+      rgba(16, 19, 13, 0.82) 0%,
+      rgba(16, 19, 13, 0.2) 32%,
+      rgba(16, 19, 13, 0.2) 55%,
+      rgba(16, 19, 13, 0.88) 100%
+    ),
+    url("images/entree.jpg");
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 0 20px;
+}
+
+.hero-titre {
+  font-size: 56px;
+  font-style: italic;
+  line-height: 1;
+  margin: 0 0 28px;
+}
+
+.bouton-hero {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid var(--lueur);
+  color: var(--lueur);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-texte {
+  margin-top: auto;
+}
+
+.hero-lieu {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -140,5 +195,8 @@ footer {
   }
   .plat-nom {
     font-size: 22px;
+  }
+  .hero-titre {
+    font-size: 104px;
   }
 }
