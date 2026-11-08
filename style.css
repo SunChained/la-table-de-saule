@@ -126,3 +126,19 @@ footer {
   font-size: 14px;
   color: var(--texte-secondaire);
 }
+
+@media (min-width: 768px) {
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .plat-nom {
+    font-size: 22px;
+  }
+}
