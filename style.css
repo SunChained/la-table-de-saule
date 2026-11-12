@@ -118,6 +118,11 @@ main a {
   border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.bouton-appel:hover {
+  background-color: var(--nuit);
 }
 
 footer {
@@ -169,6 +174,14 @@ main {
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.bouton-hero:hover {
+  background-color: var(--lueur);
+  color: var(--nuit);
 }
 
 .hero-texte {
