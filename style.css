@@ -1,3 +1,5 @@
+/* ===== Couleurs ===== */
+
 :root {
   --fond: #f6f1e7;
   --texte: #2b2620;
@@ -7,6 +9,8 @@
   --nuit: #10130d;
   --lueur: #fbf6ec;
 }
+
+/* ===== Base de la page ===== */
 
 body {
   background-color: var(--fond);
@@ -23,116 +27,7 @@ h3,
   font-family: "Cormorant Garamond", serif;
 }
 
-.plats {
-  list-style: none;
-  padding: 0;
-}
-
-.plat-ligne {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.plat-nom {
-  font-size: 20px;
-}
-
-.plat-description {
-  font-size: 15px;
-  color: var(--texte-secondaire);
-  margin-top: 4px;
-  margin-bottom: 0;
-}
-
-h3 {
-  color: var(--accent);
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.plat {
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--trait);
-  padding-bottom: 16px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-}
-
-nav a {
-  color: var(--lueur);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.logo {
-  font-size: 28px;
-  text-align: center;
-  color: var(--lueur);
-}
-
-h2 {
-  font-size: 32px;
-  text-align: center;
-  margin-top: 48px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border-bottom: 1px solid var(--trait);
-  padding: 12px 0;
-  text-align: center;
-}
-
-address {
-  font-style: normal;
-  margin-top: 24px;
-}
-
-#infos,
-#reserver {
-  text-align: center;
-}
-
-main a {
-  color: var(--accent);
-}
-
-.bouton-appel {
-  display: inline-block;
-  padding: 14px 28px;
-  background-color: var(--accent);
-  color: var(--fond);
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: background-color 0.3s;
-}
-
-.bouton-appel:hover {
-  background-color: var(--nuit);
-}
-
-footer {
-  margin-top: 48px;
-  padding: 24px 20px;
-  border-top: 1px solid var(--trait);
-  text-align: center;
-  font-size: 14px;
-  color: var(--texte-secondaire);
-}
+/* ===== Entrée de page : photo, nom, navigation ===== */
 
 header {
   min-height: 100vh;
@@ -154,8 +49,37 @@ header {
   box-sizing: border-box;
 }
 
-main {
-  padding: 0 20px;
+.logo {
+  font-size: 28px;
+  text-align: center;
+  color: var(--lueur);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+nav a {
+  color: var(--lueur);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ===== Entrée de page : texte du bas ===== */
+
+.hero-texte {
+  margin-top: auto;
+}
+
+.hero-lieu {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .hero-titre {
@@ -187,22 +111,120 @@ main {
   color: var(--nuit);
 }
 
-.hero-texte {
-  margin-top: auto;
-}
-
-.hero-lieu {
-  margin: 0 0 12px;
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
 .hero-statut {
   margin: 16px 0 0;
   font-size: 14px;
   letter-spacing: 1px;
 }
+
+/* ===== Contenu : commun aux trois sections ===== */
+
+main {
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+main a {
+  color: var(--accent);
+}
+
+/* ===== La carte ===== */
+
+h3 {
+  color: var(--accent);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.plats {
+  list-style: none;
+  padding: 0;
+}
+
+.plat {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--trait);
+  padding-bottom: 16px;
+}
+
+.plat-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.plat-nom {
+  font-size: 20px;
+}
+
+.plat-description {
+  font-size: 15px;
+  color: var(--texte-secondaire);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* ===== Horaires et accès, Réserver : texte centré ===== */
+
+#infos,
+#reserver {
+  text-align: center;
+}
+
+/* ===== Horaires et accès ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--trait);
+  padding: 12px 0;
+  text-align: center;
+}
+
+address {
+  font-style: normal;
+  margin-top: 24px;
+}
+
+/* ===== Réserver ===== */
+
+.bouton-appel {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--accent);
+  color: var(--fond);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.bouton-appel:hover {
+  background-color: var(--nuit);
+}
+
+/* ===== Pied de page ===== */
+
+footer {
+  margin-top: 48px;
+  padding: 24px 20px;
+  border-top: 1px solid var(--trait);
+  text-align: center;
+  font-size: 14px;
+  color: var(--texte-secondaire);
+}
+
+/* ===== Animations ===== */
 
 @keyframes lever {
   from {
@@ -214,6 +236,8 @@ main {
     transform: translateY(0);
   }
 }
+
+/* ===== Grand écran (à partir de 768px) ===== */
 
 @media (min-width: 768px) {
   main {
